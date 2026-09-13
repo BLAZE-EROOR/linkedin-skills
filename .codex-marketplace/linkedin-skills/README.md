@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/linkedin-skills-hero.png" alt="11 Claude Code and Codex skills for LinkedIn marketing — open source, MIT licensed" width="900" />
+  <img src="assets/linkedin-skills-hero.png" alt="12 Claude Code and Codex skills for LinkedIn marketing — open source, MIT licensed" width="900" />
 </p>
 
 # LinkedIn Marketing Skills for Claude Code and Codex
@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/PRs-welcome-F59E0B.svg" alt="PRs Welcome">
 </p>
 
-**Claude skills for LinkedIn.** 11 Claude Code and Codex skills that write LinkedIn posts, comments, and replies in your voice. They draft content, strip AI tells, and wait for your approval before anything gets published. No coding required.
+**Claude skills for LinkedIn.** 12 Claude Code and Codex skills that write LinkedIn posts, comments, and replies in your voice. They draft content, strip AI tells, and wait for your approval before anything gets published. No coding required.
 
 > **On another platform too?** The same team ships matching marketing skill bundles for [X (Twitter)](https://github.com/sergebulaev/x-skills) · [Instagram](https://github.com/sergebulaev/instagram-skills) · [YouTube](https://github.com/sergebulaev/youtube-skills) · [TikTok](https://github.com/sergebulaev/tiktok-skills) · [Threads](https://github.com/sergebulaev/threads-skills) · [Facebook](https://github.com/sergebulaev/facebook-skills). Same voice engine, same approve-before-publish flow.
 
@@ -94,7 +94,7 @@ git clone https://github.com/sergebulaev/linkedin-skills.git
 cd linkedin-skills
 ```
 
-The repo ships a `.claude/skills/` mirror of symlinks, so Claude Code finds all 11 skills on its own.
+The repo ships a `.claude/skills/` mirror of symlinks, so Claude Code finds all 12 skills on its own.
 
 ### Hermes Agent
 
@@ -143,7 +143,7 @@ Once installed, just ask Claude Code or Codex for help with LinkedIn. The right 
 
 Every skill shows you a draft first and waits for your OK before doing anything. Nothing gets posted without your approval.
 
-## The 11 skills
+## The 12 skills
 
 | Skill | What it does |
 |---|---|
@@ -158,6 +158,7 @@ Every skill shows you a draft first and waits for your OK before doing anything.
 | **Profile Optimizer** | Rewrites your headline, About section, Featured section, and Experience for 2026 conversion patterns |
 | **Employee Advocacy** | Plans a team LinkedIn program: 14-day launch, posting cadence, brand governance, ROI tracking |
 | **Repurposer** | Turns content from another platform (tweet, thread, YouTube video, blog, newsletter) into a native LinkedIn post: re-hooks for the fold, expands to the 900-1300 char sweet spot, moves links to the first comment, runs the humanizer |
+| **Interviewer** | Interviews you and keeps the answers in a Story Bank: roles, receipts with real numbers, turning points, scars, positions you would defend. Every other skill reads it, so drafts stop asking you for a specific number mid-request. Also runs a focused interview that turns one topic into a post spine. The only skill that works when you have never posted before, since it needs a career rather than an archive |
 
 ## Built for founders
 
