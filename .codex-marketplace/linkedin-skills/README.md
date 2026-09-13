@@ -53,11 +53,15 @@ codex plugin add linkedin-skills@linkedin-skills
 ### Claude Desktop (Mac / Windows)
 
 1. Open Claude Desktop
-2. Click **Customize**
-3. Click the **+** next to **Personal plugins** → **Create plugin** → **Add marketplace**
-4. Choose **Add from a repository** and paste: `sergebulaev/linkedin-skills`
-5. Install the plugin
-6. Done. Start a new conversation and ask Claude to write a LinkedIn post.
+2. Click **Customize** in the left sidebar, then open the **Plugins** tab
+3. Click the **Add** dropdown at the top right and choose **Add marketplace**
+4. Select **Add from a repository**, paste `sergebulaev/linkedin-skills`, and sync
+5. Switch to the **Discover** tab and find the plugin in the list
+6. Click the **+** on the plugin card to install it
+7. Switch back to **Yours** to confirm it is listed and enabled
+8. Done. Start a new conversation and ask Claude to write a LinkedIn post.
+
+> The tab switch in steps 5 and 7 is the part that trips people: syncing a marketplace puts the plugin in the catalog (**Discover**), not in your installed list (**Yours**). The **+** in step 6 sits on the plugin card itself, not beside a section heading.
 
 ### OpenClaw
 
