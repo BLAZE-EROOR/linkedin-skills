@@ -17,3 +17,10 @@ testing/
 # Playwright MCP session artifacts
 .playwright-mcp/
 /fk-*
+
+# Personal content — these two files ship as templates but hold career detail,
+# figures, failures and named people once filled. They are TRACKED upstream, so
+# .gitignore alone will not stop a commit: also run
+#   git update-index --skip-worktree references/story-bank.md references/voice-profile.md
+references/story-bank.md
+references/voice-profile.md
