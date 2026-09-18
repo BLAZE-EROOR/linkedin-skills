@@ -214,7 +214,29 @@ class ApifyClient:
         result_limit: int = 30,
         force_refresh: bool = False,
     ) -> list[dict[str, Any]]:
-        """Return a user's most recent comments across LinkedIn."""
+        """Return a user's most recent comments across LinkedIn.
+
+        The actor's field names are NOT the ones the thread-monitor skill used to
+        describe. Verified against live output 2026-09-18, each item is:
+
+            comment_text                 str   what the user wrote
+            comment_urn                  str   urn:li:comment:(ugcPost:<POST>,<COMMENT>)
+                                               note: the prefix can be `ugcPost:` or
+                                               `activity:` depending on the parent
+            comment_link                 str
+            comment_stats.comments       int   REPLY COUNT on this comment. >0 is the
+                                               signal a thread is live; skip the
+                                               per-thread fetch when it is 0.
+            comment_stats.total_reactions int
+            created_at.timestamp         int   epoch ms
+            created_at.relative          str   e.g. "3h"
+            commenter.{name,subtitle,linkedin_url}
+            post.post_text               str   parent post body
+            post.post_url                str
+
+        There is no `commentary`, `postUrl` or `reactionStats` key; reading those
+        returns None and a sweep silently looks empty.
+        """
         return self._run_sync(
             self.PROFILE_COMMENTS_ACTOR,
             {"username": username, "resultLimit": result_limit},

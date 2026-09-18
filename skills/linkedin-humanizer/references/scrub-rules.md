@@ -249,6 +249,20 @@ NEG_PARALLEL_PATTERNS = [
     r"The question isn't (\w+(?:\s+\w+){0,5}), it's (\w+(?:\s+\w+){0,5})",
     r"This isn't (\w+(?:\s+\w+){0,5})\. This is (\w+(?:\s+\w+){0,5})",
     r"The real (\w+) isn't (\w+(?:\s+\w+){0,5}), it's (\w+(?:\s+\w+){0,5})",
+
+    # Period-split and uncontracted forms. The seven patterns above all require
+    # either a comma or a contraction, so the same construction escapes every one
+    # of them the moment it is written out in full or split across a full stop.
+    # These five all passed the set above in real drafts:
+    #   "The bug isn't in what the withdraw function does. It's in what nothing does"
+    #   "It is not the time saved. It is that you get to stop holding something."
+    #   "Not a hello world. A staking pool that calculates its own rewards"
+    #   "Not because it was complicated. Because there was no undo."
+    #   "What surprised me was not that it worked. It was what it did to me afterwards."
+    r"\b(?:is|was|are|were) not [^.!?\n]{1,60}[.!?]\s+(?:It|That|They|This) (?:is|was|are|were)\b",
+    r"\b(?:isn't|wasn't|aren't|weren't) [^.!?\n]{1,60}[.!?]\s+(?:It's|That's|It is|That is)\b",
+    r"(?:^|(?<=[.!?]\s))Not [^.!?\n]{1,60}[.!?]\s+[A-Z]",
+    r"(?:^|(?<=[.!?]\s))Not because [^.!?\n]{1,60}[.!?]\s+Because\b",
 ]
 
 # Replacement strategy: rewrite as paired declaratives, NOT as auto-substitution.
